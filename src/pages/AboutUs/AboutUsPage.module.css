@@ -1,0 +1,87 @@
+.aboutUsHero {
+	background-image: url("/images/AboutUsImages/image00005 1.png");
+	height: 80vh;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.circularText {
+	position: absolute;
+	color: white;
+	font-weight: bold;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 130px;
+	height: 130px;
+}
+
+.whiteBorder {
+	border-left: 1px solid #fafafa;
+}
+
+.rentImgContainer {
+	padding: 20px;
+}
+
+/* Table Reservation Form */
+
+.customInput::placeholder {
+	color: #aaaaaa;
+	opacity: 1;
+}
+
+.customInput {
+	color: white;
+}
+
+.customInput:focus {
+	color: white;
+	background-color: black;
+}
+
+input[type="date"] {
+	color: #aaaaaa;
+	background-color: black;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+	color: white;
+	background-color: black;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+	cursor: pointer;
+}
+
+.selectColor {
+	color: #aaaaaa;
+}
+
+@media (min-width: 426px) {
+	.rentImgContainer {
+		padding-inline: 100px;
+	}
+
+	.tableReservationWrapper {
+		padding: 40px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.circularText {
+		width: 160px;
+		height: 160px;
+	}
+}
+@media (min-width: 1400px) {
+	.tableReservationWrapper {
+		padding: 80px;
+	}
+}

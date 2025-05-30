@@ -1,0 +1,163 @@
+.menuBanner {
+  background-image: url("/images/menu-page/bg-img.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .menuBanner {
+    height: calc(100vh - 64px);
+  }
+}
+.bannerCard {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid #f5efdb;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+@media (max-width: 320px) {
+  .wrapperCard {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .bannerCard {
+    height: 100px;
+    max-width: 160px;
+  }
+
+  .bannerCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.bannerCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.iconLink {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.bannerCard:hover .iconLink {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bannerCard:hover {
+  cursor: pointer;
+}
+
+.mainBg {
+  background-color: #b4b8ae;
+}
+.customBtn {
+  background-color: transparent;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.listedDrinks {
+  width: 100%;
+  position: relative;
+}
+.listedDrinks:hover .hoverDrink {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.hoverDrink {
+  display: none;
+}
+.hoverToggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hoverToggle:checked + img + .hoverDrink {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  .listedDrinks:hover .hoverDrink {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .listedDrinks {
+    width: calc(50% - 1rem);
+  }
+}
+.listedDrinks img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.popularCard {
+  padding: 40px 40px;
+  background-color: #242424;
+  color: #c0c6ba;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.popularCardText {
+  color: #dcca87;
+}
+.popularCardImg {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.popularCardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
